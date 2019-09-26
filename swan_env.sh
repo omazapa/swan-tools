@@ -29,3 +29,25 @@ function swan_container_exec()
 {
 	ssh -t root@swan00$1 docker exec -it $2 /bin/bash
 }
+
+# Function to connect to a swan node and do cat over /var/log/messages
+# you can to use it  with grep to filter the required information
+# parameters None 
+function swan_node_messages()
+{ 
+	for i in $(seq 1 1 6);
+	do 
+		ssh root@swan00$i cat /var/log/messages 
+	done
+}
+
+# Function to connect to a swan node and do cat over /var/log/messages
+# you can to use it  with grep to filter the required information
+# parameters None 
+function swan_node_df()
+{ 
+	for i in $(seq 1 1 6);
+	do 
+		ssh root@swan00$i 'df -h | grep timed' 
+	done
+}
