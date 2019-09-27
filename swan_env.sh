@@ -41,8 +41,7 @@ function swan_node_messages()
 	done
 }
 
-# Function to connect to a swan node and do cat over /var/log/messages
-# you can to use it  with grep to filter the required information
+# Function to connect to a swan node and run df -h | grep timed 
 # parameters None 
 function swan_node_df()
 { 
