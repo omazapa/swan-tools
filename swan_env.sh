@@ -48,6 +48,7 @@ function swan_node_df()
 { 
 	for i in $(seq 1 1 6);
 	do 
-		ssh root@swan00$i 'df -h | grep timed' 
+		echo "== SWAN node $i =="
+		ssh -K root@swan00$i 'df -h | grep timed' 
 	done
 }
