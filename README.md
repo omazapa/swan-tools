@@ -1,7 +1,7 @@
 # swan-tools
 Some tools  for the Rota in SWAN
 
-# usege
+# usage
 * init your kerberos session with kinit user@CERN.CH
 * source swan_env.sh
 
