@@ -21,6 +21,15 @@ function swan_journalctl()
 	ssh root@swan00$1 journalctl CONTAINER_ID=$2
 }
 
+# Function to get the container output using journalctl
+# parameters 
+# $1 : swan node
+# $2 : container username  CONTAINER_NAME=jupyter-<username>
+function swan_journalctl_user()
+{
+	ssh root@swan00$1 journalctl CONTAINER_NAME=jupyter-$2
+}
+
 # Function to connect to a container in a swan node
 # parameters 
 # $1 : swan node
